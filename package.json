@@ -1,0 +1,8 @@
+{
+  "name": "muslim-wc2026",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "echo 'No build needed'",
+    "dev": "npx serve ."
+  }
+}

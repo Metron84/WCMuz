@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a1628" />
+  <meta name="description" content="2026 FIFA World Cup schedule for all 13 Muslim & Arab nations — times in Lebanon Time (LBT)" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Muslim WC 2026" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Muslim Nations — World Cup 2026" />
+  <meta property="og:description" content="All 13 Muslim & Arab nations at FIFA World Cup 2026. Match schedule in Lebanon Time." />
+  <meta property="og:type" content="website" />
+
+  <title>Muslim Nations · World Cup 2026</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="src/style.css" />
+</head>
+<body>
+
+  <div class="stars" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-top">
+        <div class="header-emblem">☪</div>
+        <div class="header-text">
+          <p class="header-eyebrow">FIFA World Cup 2026</p>
+          <h1 class="header-title">Muslim Nations</h1>
+          <p class="header-sub">13 teams · Lebanon Time (UTC+3)</p>
+        </div>
+      </div>
+      <div class="header-stats">
+        <div class="stat"><span class="stat-num">13</span><span class="stat-label">Nations</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">39</span><span class="stat-label">Matches</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">11 Jun</span><span class="stat-label">Kick-off</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">19 Jul</span><span class="stat-label">Final</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All Nations</button>
+      <button class="filter-btn" data-filter="arab">🌍 Arab</button>
+      <button class="filter-btn" data-filter="muslim">🌙 Other Muslim</button>
+    </div>
+
+    <div class="section-label">Arab Nations</div>
+    <div class="teams-grid" id="teams-grid"></div>
+
+    <div class="section-label section-label--muslim">Other Muslim-Majority Nations</div>
+    <div class="teams-grid" id="teams-grid-muslim"></div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>All times in <strong>Lebanon Time (LBT · UTC+3)</strong> — 1 hour behind UAE/GST</p>
+    <p class="footer-note">Group stage only · Data from official FIFA schedule · Built for fans 🤍</p>
+  </footer>
+
+  <script src="src/data.js"></script>
+  <script src="src/app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>
